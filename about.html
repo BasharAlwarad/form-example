@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+  </head>
+  <body>
+    <h1>About</h1>
+    <p>This is the about page.</p>
+    <ul>
+      <li><strong>Name:</strong> <span id="name"></span></li>
+      <li><strong>Email:</strong> <span id="email"></span></li>
+      <li><strong>Salary:</strong> <span id="salary"></span></li>
+      <li><strong>Date of Birth:</strong> <span id="dob"></span></li>
+    </ul>
+
+    <script>
+      // Retrieve the form data from the URL parameters
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get('name');
+      const email = params.get('email');
+      const salary = params.get('salary');
+      const dob = params.get('dob');
+
+      // Display the form data in the list
+      document.getElementById('name').textContent = name;
+      document.getElementById('email').textContent = email;
+      document.getElementById('salary').textContent = salary;
+      document.getElementById('dob').textContent = dob;
+    </script>
+  </body>
+</html>
